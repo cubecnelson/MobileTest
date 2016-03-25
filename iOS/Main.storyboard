@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="F1r-n3-0Ie">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Un7-QI-bcp">
+            <objects>
+                <navigationController id="F1r-n3-0Ie" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fvJ-xk-h7v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yjw-D7-q0u" kind="relationship" relationship="rootViewController" id="gIU-7l-1XY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nL2-9D-uc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104" y="-377"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="giG-Fx-8wd">
+            <objects>
+                <viewController id="yjw-D7-q0u" customClass="ListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gBf-uF-ghM"/>
+                        <viewControllerLayoutGuide type="bottom" id="27E-D2-obO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tfc-QQ-gxL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N3A-wr-Bv5">
+                        <barButtonItem key="rightBarButtonItem" title="New" id="z86-48-Xec">
+                            <connections>
+                                <segue destination="PAU-WE-Zvt" kind="presentation" id="Vza-ge-xaJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kpd-KQ-sol" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="623" y="-377"/>
+        </scene>
+        <!--Upload-->
+        <scene sceneID="WmL-Bg-PnH">
+            <objects>
+                <viewController id="lXf-R9-Ehv" customClass="UploadViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IYU-4U-mTy"/>
+                        <viewControllerLayoutGuide type="bottom" id="idj-oh-MYy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kSm-wq-59Z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0o-3C-jL0">
+                                <rect key="frame" x="20" y="86" width="22" height="22"/>
+                                <animations/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="p0o-3C-jL0" firstAttribute="top" secondItem="IYU-4U-mTy" secondAttribute="bottom" constant="22" id="ErI-xY-Qdf"/>
+                            <constraint firstItem="p0o-3C-jL0" firstAttribute="leading" secondItem="kSm-wq-59Z" secondAttribute="leadingMargin" id="qWD-Eh-9Kv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Upload" id="NwO-gU-s8N">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="78g-ns-EsX">
+                            <connections>
+                                <action selector="Cancel:" destination="lXf-R9-Ehv" id="xCM-sx-lhl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Jl1-bP-mLH"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="CancelButton" destination="78g-ns-EsX" id="4r4-ea-pk5"/>
+                        <outlet property="NewImageButton" destination="p0o-3C-jL0" id="Uvm-u7-FXD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="370-x8-Chz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2088" y="-377"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R9u-0a-ogp">
+            <objects>
+                <navigationController id="PAU-WE-Zvt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C7a-8G-j7m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lXf-R9-Ehv" kind="relationship" relationship="rootViewController" id="6Oy-Kp-aae"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9d7-AH-ajM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1406" y="-377"/>
+        </scene>
+    </scenes>
+</document>
